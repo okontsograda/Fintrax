@@ -1,0 +1,2 @@
+# Fintrax
+Private financial tracking
