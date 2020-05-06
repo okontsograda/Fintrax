@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Material Design for Bootstrap</title>
+  <title>Trax</title>
   <!-- MDB icon -->
   <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon">
   <!-- Font Awesome -->
@@ -20,7 +20,6 @@
 </head>
 <body>
 
-  <!-- Start your project here-->  
     <!--Navbar-->
   <nav class="navbar navbar-expand-lg navbar-dark primary-color">
 
@@ -75,66 +74,221 @@
   </nav>
   <!--/.Navbar-->
   <!-- Main Page Body -->
-  <div class="container vertical-padding">
-    <div class="row">
-      <div class="col-sm-12 col-md-5 col-lg-4">
-          <!-- Card -->
-            <div class="card">
-
-                <!-- Card body -->
-                <div class="card-body">
-            
-                <!-- Material form register -->
-                <form>
-                    <p class="h4 text-center py-4">New Transaction</p>
-            
-                    <!-- Material input text -->
-                    <div class="md-form">
-                    <i class="fa fa-user prefix grey-text"></i>
-                    <input type="text" id="materialFormCardNameEx" class="form-control">
-                    <label for="materialFormCardNameEx" class="font-weight-light">Your name</label>
-                    </div>
-            
-                    <!-- Material input email -->
-                    <div class="md-form">
-                    <i class="fa fa-envelope prefix grey-text"></i>
-                    <input type="email" id="materialFormCardEmailEx" class="form-control">
-                    <label for="materialFormCardEmailEx" class="font-weight-light">Your email</label>
-                    </div>
-            
-                    <!-- Material input email -->
-                    <div class="md-form">
-                    <i class="fa fa-exclamation-triangle prefix grey-text"></i>
-                    <input type="email" id="materialFormCardConfirmEx" class="form-control">
-                    <label for="materialFormCardConfirmEx" class="font-weight-light">Confirm your email</label>
-                    </div>
-            
-                    <!-- Material input password -->
-                    <div class="md-form">
-                    <i class="fa fa-lock prefix grey-text"></i>
-                    <input type="password" id="materialFormCardPasswordEx" class="form-control">
-                    <label for="materialFormCardPasswordEx" class="font-weight-light">Your password</label>
-                    </div>
-            
-                    <div class="text-center py-4 mt-3">
-                    <button class="btn btn-cyan" type="submit">Register</button>
-                    </div>
-                </form>
-                <!-- Material form register -->
-            
-                </div>
-                <!-- Card body -->
-            
-            </div>
-            <!-- Card -->
+  <div class="container-fluid vertical-padding">
+  <div class="row" style="margin-bottom:24px;">
+    <div class="col-sm-4 col-md-4 col-lg-4">
+      <div class="card">
+        <div class="card-body text-center">
+          <h4 class="card-title">$5,432.12</h4>
+          <p class="card-text">Monthly Income</p>
+        </div>
       </div>
-      <div class="col-sm-12 col-md-7 col-lg-8">
-        
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+      <div class="card">
+        <div class="card-body text-center">
+          <h4 class="card-title">$6,432.12</h4>
+          <p class="card-text">Monthly Expense</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+      <div class="card">
+        <div class="card-body text-center">
+          <h4 class="card-title">$-1,000.00</h4>
+          <p class="card-text">Budget</p>
+        </div>
       </div>
     </div>
   </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-12">
+        <div class="view view-cascade gradient-card-header blue-gradient narrower py-2 mx-4 mb-3 d-flex justify-content-between align-items-center">
+          <div class="p-left">
+            <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2" data-toggle="modal" data-target="#modalNewRecord">
+              <i class="fas fa-pencil-alt mt-0"></i>
+            </button>
+          </div>
+            <a href="" class="white-text mx-3">Transaction History</a>
+          <div class="p-right">
+            <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2">
+              <i class="fas fa-info-circle mt-0"></i>
+            </button>
+          </div>
+      
+        </div>
+          <div class="card">
+            <div class="card-body table-headings">
+              <div class="row">
+                <div class="record-date col-sm-3">
+                  <h6 class="card-title t-heading">Date</h6>
+                </div>
+                <div class="col-sm-3">
+                  <h6 class="card-title t-heading">Name</h6>
+                </div>
+                <div class="col-sm-3">
+                  <h6 class="card-title t-heading">Amount</h6>
+                </div>
+                <div class="col-sm-1">
+                  <i class="far fa-image"></i>
+                </div>
+                <div class="col-sm-1"></div>
+              </div>
+            </div>
+            <div class="card-body table-first-row">
+              <div class="row expense-record">
+                <div class="record-date col-sm-3">
+                  <p class="table-content">May 05 2020</p>
+                </div>
+                <div class="col-sm-3">
+                  <p class="table-content">Income</p>
+                </div>
+                <div class="col-sm-3">
+                  <p class="table-content">-$5,123.123</p>
+                </div>
+                <div class="col-sm-1">
+                  <i class="table-content-image far fa-image"></i>
+                </div>
+                <div class="col-sm-1">
+                  <button type="button" class="btn btn-outline-red btn-rounded btn-sm px-2">
+                    <i class="far fa-trash-alt mt-0"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="row income-record">
+                <div class="record-date col-sm-3">
+                  <p class="table-content">May 05 2020</p>
+                </div>
+                <div class="col-sm-3">
+                  <p class="table-content">Income</p>
+                </div>
+                <div class="col-sm-3">
+                  <p class="table-content">$5,123.123</p>
+                </div>
+                <div class="col-sm-1">
+                  <i class="table-content-image far fa-image"></i>
+                </div>
+                <div class="col-sm-1">
+                  <button type="button" class="btn btn-outline-red btn-rounded btn-sm px-2">
+                    <i class="far fa-trash-alt mt-0"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Modal: New Expense / Income Record Form-->
+<div class="modal fade" id="modalNewRecord" tabindex="-1" role="dialog" aria-labelledby="modalNewRecord" aria-hidden="true">
+  <div class="modal-dialog cascading-modal" role="document">
+    <!--Content-->
+    <div class="modal-content">
+
+      <!--Modal cascading tabs-->
+      <div class="modal-c-tabs">
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#panel7" role="tab"><i class="fas fa-user mr-1"></i>
+              Expense</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#panel8" role="tab"><i class="fas fa-user-plus mr-1"></i>
+              Income</a>
+          </li>
+        </ul>
+
+        <!-- Tab panels -->
+        <div class="tab-content">
+          <!--Panel 7-->
+          <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
+
+            <!--Body-->
+            <div class="modal-body mb-1">
+              <div class="md-form form-sm mb-1">
+                <input type="text" id="modalLRInput10" class="form-control mb-1 form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modalLRInput10">Expense Name</label>
+              </div>
+              <div class="md-form form-sm mb-5">
+                <input type="number" id="modalLRInput10" class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modalLRInput10">Amount</label>
+              </div>
+              <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker">
+                <input placeholder="Select date" type="text" id="example" class="form-control">
+                <i class="fas fa-calendar input-prefix" tabindex=0></i>
+              </div>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                </div>
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="inputGroupFile01"
+                    aria-describedby="inputGroupFileAddon01">
+                  <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                </div>
+              </div>
+              <div class="text-center mt-2">
+                <button class="btn btn-info">Log in <i class="fas fa-sign-in ml-1"></i></button>
+              </div>
+            </div>
+            <!--Footer-->
+            <div class="modal-footer">
+              <div class="options text-center text-md-right mt-1">
+              </div>
+              <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+            </div>
+
+          </div>
+          <!--/.Panel 7-->
+
+          <!--Panel 8-->
+          <div class="tab-pane fade" id="panel8" role="tabpanel">
+
+            <!--Body-->
+            <div class="modal-body">
+              <div class="md-form form-sm mb-5">
+                <i class="fas fa-envelope prefix"></i>
+                <input type="email" id="modalLRInput12" class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modalLRInput12">Your email</label>
+              </div>
+
+              <div class="md-form form-sm mb-5">
+                <i class="fas fa-lock prefix"></i>
+                <input type="password" id="modalLRInput13" class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modalLRInput13">Your password</label>
+              </div>
+
+              <div class="md-form form-sm mb-4">
+                <i class="fas fa-lock prefix"></i>
+                <input type="password" id="modalLRInput14" class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modalLRInput14">Repeat password</label>
+              </div>
+
+              <div class="text-center form-sm mt-2">
+                <button class="btn btn-info">Sign up <i class="fas fa-sign-in ml-1"></i></button>
+              </div>
+
+            </div>
+            <!--Footer-->
+            <div class="modal-footer">
+              <div class="options text-right">
+                <p class="pt-1">Already have an account? <a href="#" class="blue-text">Log In</a></p>
+              </div>
+              <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+          <!--/.Panel 8-->
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
   <!-- End Main Page Body -->
-  <!-- End your project here-->
 
   <!-- jQuery -->
   <script type="text/javascript" src="js/jquery.min.js"></script>

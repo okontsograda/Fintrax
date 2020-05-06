@@ -1,3 +1,67 @@
 .vertical-padding {
     padding-top:36px;
 }
+
+.container-fluid {
+    padding-left:30px;
+    padding-right:30px
+}
+
+.btn-rounded {
+    border-radius: 10rem;
+}
+
+.p-left {
+    padding-left:8px;
+}
+
+.p-right {
+    padding-right: 8px;
+}
+
+.mx-3 {
+    font-size: 20px;
+}
+
+.table-content {
+    margin:0;
+    padding-top:10px;
+}
+
+.table-content-image {
+    padding-top:14px;
+}
+
+.view-cascade {
+    border-radius: .25rem;
+    margin: 0 !important;
+}
+
+.table-headings {
+    padding-bottom:0;
+}
+
+.table-first-row {
+    padding-top:0;
+}
+
+.t-heading {
+    font-weight: 600 !important;
+}
+
+.expense-record {
+    color: red;
+}
+
+.income-record {
+    color: green;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+    .record-date {
+        display: none;
+    }
+  }
