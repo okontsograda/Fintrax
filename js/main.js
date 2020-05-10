@@ -1,5 +1,17 @@
 var milStatus = document.getElementById('milStatus');
 
+document.getElementById('getRecords').addEventListener('click', function () {
+    var settings = {
+        "url": "https://cors-custom.herokuapp.com/locations",
+        "method": "GET",
+        "timeout": 0,
+      };
+      
+      $.ajax(settings).done(function (response) {
+        console.log(response);
+      });
+});
+
 document.getElementById('initiateMileage').addEventListener('click', function() {
     if ( this.innerText == 'START') {
         navigator.geolocation.getCurrentPosition(onSuccess, onError);
@@ -26,25 +38,23 @@ function onSuccess(position) {
 
     if ( newLat != null && newLong != null) {
         // Submit the location data to our API
-        var myHeaders = new Headers();
-        myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
-
-        var urlencoded = new URLSearchParams();
-        urlencoded.append("userId", "oleg");
-        urlencoded.append("lat", newLat);
-        urlencoded.append("long", newLong);
-
-        var requestOptions = {
-        method: 'POST',
-        headers: myHeaders,
-        body: urlencoded,
-        redirect: 'follow'
-        };
-
-        fetch("glt-api.herokuapp.com/api/locations?lat="+ newLat +"&long="+ newLong + "&userId=oleg", requestOptions)
-        .then(response => response.text())
-        .then(result => console.log(result))
-        .catch(error => console.log('error', error));
+        var settings = {
+            "url": "https://cors-custom.herokuapp.com/locations/https://glt-api.herokuapp.com/api/locations",
+            "method": "POST",
+            "timeout": 0,
+            "headers": {
+              "Content-Type": ["application/x-www-form-urlencoded", "application/x-www-form-urlencoded"]
+            },
+            "data": {
+              "userId": "oleg",
+              "lat": newLat,
+              "long": newLong
+            }
+          };
+          console.log(settings);
+          $.ajax(settings).done(function (response) {
+            console.log(response);
+          });
 
         mapboxgl.accessToken = 'pk.eyJ1Ijoib2tvbnRzb2dyYWRhIiwiYSI6ImNrOXo5NnZmdDA3ZnEzbnFpaWwwcml3NWcifQ.-dNjmszWB14KOPq3qlE0sQ';
         var map = new mapboxgl.Map({
@@ -59,3 +69,4 @@ function onSuccess(position) {
 function onError(error) {
     alert('code: ' + error.code);
 }
+
